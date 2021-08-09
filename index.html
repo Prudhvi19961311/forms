@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>HTML5 Forms</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="prudhvi">
+        <meta name="description" content="forms and inputs of HTML5">
+        <meta name="keywords" content="forms, inputs, HTML5, HTML, Web development">
+    </head>
+    <body>
+        <!--form tag is used to take inputs from users-->
+        <!--form tag must have the attribute action, this is to redirect the form data to the action page-->
+        <!--enctype attribute is to define the encoding type of the form-->
+        <!--method attribute is used to define the way we send the user input data to the action page-->
+        <form action="action_page_destination" enctype="multipart/form-data" method="POST">
+
+            <!--fieldset is used to group related elements in a form-->
+            <!--fieldset draws a border around the group-->
+            <fieldset>
+            <!--Legend tag gives a caption to the fieldset-->
+            <legend>Practising Form</legend>
+            <!--label tag defines a label for inputs-->
+            <!--most of the screen readers will readout the label data for input elements-->
+            <label for="text">text</label>
+            <!--input type text is used for taking text input from the user-->
+            <input type="text" name="text" id="text"><br><br>
+            <label for="number">Number</label>
+            <!--input type number is used for taking numerical digit input from the user-->
+            <!--for number type you can also add restrictions like max, min, step-->
+            <input type="number" name="number" id="number" min="1" max="9"><br><br>
+            <label for="email">Email</label>
+            <!--input type email is used for taking email from the user-->
+            <!--for email input without special character '@' content is not accepted-->
+            <input type="email" name="email" id="email"><br><br>
+            <label for="tel">Telephone number</label>
+            <!--tel is used for inserting telephone number-->
+            <input type="tel" name="tel" id="tel"><br><br>
+            <label for="color">Color</label>
+            <!--color is used for selecting color-->
+            <input type="color" name="color" id="color"><br><br>
+            <!--checkbox is used for checking the default values from the user-->
+            <input type="checkbox" name="car" id="car"><br><br>
+            <label for="car">select if you have a car</label>
+            <input type="checkbox" name="bike" id="bike"><br>
+            <label for="bike">select if you have a bike</label>
+            <label for="date">Date</label>
+            <!--date is used for taking date from the user input-->
+            <!--date is not supported in safari or IE 11 or earlier-->
+            <input type="date" name="date" id="date"><br><br>
+            <label for="datetime">Date time</label>
+            <!--datetime-local is used for taking date and time from user input-->
+            <!--it is not supported in firefox, IE 12 or earlier-->
+            <input type="datetime-local" name="datetime" id="datetime"><br><br>
+            <label for="file">file upload</label>
+            <!--input type file is used to upload files from the user-->
+            <input type="file" name="file" id="file"><br><br>
+            <!--input type hidden is used when the data should not be visible to the user-->
+            <!--generally it is used to update the record when the form is submitted-->
+            <input type="hidden" id="custID" name="custID" value="3478"><br><br>
+            <!--input type image is often uses image as a submit button-->
+            <input type="image" src="img.jpg" alt="submit"><br><br>
+            <label for="month">month and year</label>
+            <!--input type month is used when the user needs to insert only month and year-->
+            <!--month is not supported by firefox, safari or IE11 or earlier-->
+            <input type="month" name="month" id="month"><br><br>
+            <label for="pwd">Password</label>
+            <!--input type password is used when the user have to insert password in the input field-->
+            <!--this is to add privacy to the user-->
+            <input type="password" name="pwd" id="pwd"><br><br>
+            <!--input type radio is used to when user have to select any one of the option from multiple choices-->
+            <input type="radio" name="gender" id="male">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="female">
+            <label for="female">Female</label><br><br>
+            <label for="volume">Volume(0 to 100)</label>
+            <!--range is used to control the number whose exact value is not important-->
+            <!--range also has attributes like min, max, step, value-->
+            <input type="range" name="volume" id="volume" min="0" max="100"><br><br>
+            <!--input type reset is used for resetting all the form inputs-->
+            <input type="reset"><br><br>
+            <label for="search">Search</label>
+            <!--type search is used for a search field in the page-->
+            <input type="search" name="search" id="search"><br><br>
+            <!--type submit is a submit button which submits the form-->
+            <input type="submit" value="submit"><br><br>
+            <label for="time">Time</label>
+            <!--type time used to insert the time (not local time) as an input-->
+            <input type="time" name="name" id="name"><br><br>
+            <label for="site">Your site</label>
+            <!--type url is used for inserting url of the another site-->
+            <input type="url" name="site" id="site"><br><br>
+            <label for="week">Week</label>
+            <!--type week is used to select the week from the year-->
+            <!--week is not supported by firefox, safari, IE11 or earlier-->
+            <input type="week" name="week" id="week"><br><br>
+
+            <label for="tarea">Text Area</label>
+            <!--textarea is used when a user have to insert multiple line data like comments or reviews-->
+            <textarea name="tarea" id="tarea" cols="30" rows="10"></textarea><br><br>
+
+            <label for="select">Select</label>
+            <!--select is used to create a dropdown list-->
+            <select name="options" id="select">
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+                <option value="option4">Option 4</option>
+            </select><br><br>
+
+            <label for="optgroup">Categorised Select</label>
+            <!--optgroup is used when dropdown is again categorised-->
+            <select name="options2" id="optgroup">
+                <optgroup label="group1">
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                </optgroup>
+                <optgroup label="group2">
+                    <option value="option3">Option 3</option>
+                    <option value="option4">Option 4</option>
+                </optgroup>
+            </select><br><br>
+            </fieldset>
+        </form>
+
+        <!--button tag defines a button.-->
+        <!--button tag can have text and HTML tags unlike input type-->
+        <button type="button">Click Me!</button>
+
+        <!---->
+    </body>
+</html>
